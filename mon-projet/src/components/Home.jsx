@@ -1,53 +1,41 @@
-import {Avatar, Box, Flex, Grid} from "@radix-ui/themes";
+import { useEffect, useState } from "react";
+import { createClient } from "@supabase/supabase-js";
+import "@radix-ui/themes/styles.css";
+import {Badge, Card, Em, Flex, Strong, Theme} from "@radix-ui/themes";
 import {Text} from "@radix-ui/themes";
-import {Card} from "@radix-ui/themes";
-import {useEffect, useState} from "react";
-import {createClient} from "@supabase/supabase-js";
+import Cards from "./Card.jsx";
+
+
+
 
 const supabase = createClient("https://pxyqknxfvimxdcmplbff.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB4eXFrbnhmdmlteGRjbXBsYmZmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjkzMDM4NjIsImV4cCI6MjA0NDg3OTg2Mn0.cuq3c8ejHCSky7BcV1qlj76_QYWcYXYiAbvDolxN6Uk");
 
-
-export default function Home(){
-
-
-    const [name, setName] = useState([]);
+function Home() {
 
 
-    useEffect(() => {
-        getThings();
-    }, []);
-
-
-    async function getThings() {
-        const { data } = await supabase.from("foodInfo").select("*");
-        setName(data);
-        console.log(data);
-    }
-
-
-    return(
+    return (
         <div>
+            <Theme appearance="Light" style={{ margin: '2px' }} className="flex gap-22">
+                <div className={'p-14 flex flex-col gap-12'}>
+                    <Text className={'text-3xl'}>
+                        <Strong >All menus </Strong>
+                    </Text>
+                    <nav className={''}>
+                        <Cards />
+                    </nav>
 
-            {name.map((item, index) => (
-                <Card  key={index}>
-                    <Flex  gap="3" align="center">
-                        <Avatar
-                            size="3"
-                            // src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?&w=64&h=64&dpr=2&q=70&crop=focalpoint&fp-x=0.67&fp-y=0.5&fp-z=1.4&fit=crop"
-                            radius="full"
-                            fallback={"T"}
-                        />
-                        <Box>
-                            <Text color={'green'} as="div" size="2" weight="bold">
-                                {item.Item}
-                            </Text>
-                            <Text as="div" size="2" color="gray">
-                                {item.Category}
-                            </Text>
-                        </Box>
-                    </Flex>
-                </Card>
-            ))}
+                </div>
+
+
+
+
+
+
+
+            </Theme>
         </div>
+
     );
 }
+
+export default Home;
