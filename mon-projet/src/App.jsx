@@ -24,13 +24,13 @@ function App() {
 
     return (
         <div>
-            <Theme appearance="dark" style={{ margin: '2px' }} className="flex gap-22">
+            <Theme appearance="Light" style={{ margin: '2px' }} className="flex gap-22">
                 <div className={'p-14 flex flex-col gap-12'}>
                     <Text className={'text-3xl'}>
                         <Em >All menus</Em>
                     </Text>
-                    <nav className={'flex gap-14'}>
-                        <Cards/>
+                    <nav className={''}>
+                        <Cards />
                     </nav>
 
                 </div>
