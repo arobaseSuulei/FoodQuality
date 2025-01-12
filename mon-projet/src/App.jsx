@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 import "@radix-ui/themes/styles.css";
-import {Badge, Card, Em, Flex, Theme} from "@radix-ui/themes";
+import {Badge, Card, Em, Flex, Strong, Theme} from "@radix-ui/themes";
 import {Text} from "@radix-ui/themes";
 import Radix from "./components/Radix.jsx";
 import Home from "./components/Home.jsx";
@@ -27,7 +27,7 @@ function App() {
             <Theme appearance="Light" style={{ margin: '2px' }} className="flex gap-22">
                 <div className={'p-14 flex flex-col gap-12'}>
                     <Text className={'text-3xl'}>
-                        <Em >All menus</Em>
+                        <Strong >All menus</Strong>
                     </Text>
                     <nav className={''}>
                         <Cards />
