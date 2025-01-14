@@ -1,10 +1,11 @@
-import {Avatar, Badge, Box, Button, Code, Flex, Grid} from "@radix-ui/themes";
+import {Avatar, Badge, Box, Button, Code, Flex, Grid, Strong} from "@radix-ui/themes";
 import {Text} from "@radix-ui/themes";
 import {Card} from "@radix-ui/themes";
 import React, {useEffect, useState} from "react";
 import {createClient} from "@supabase/supabase-js";
 import Home from "./Home.jsx";
 import {Link} from "react-router-dom";
+import Filter from "./Filter.jsx";
 
 const supabase = createClient("https://pxyqknxfvimxdcmplbff.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB4eXFrbnhmdmlteGRjbXBsYmZmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjkzMDM4NjIsImV4cCI6MjA0NDg3OTg2Mn0.cuq3c8ejHCSky7BcV1qlj76_QYWcYXYiAbvDolxN6Uk");
 
@@ -33,6 +34,19 @@ export default function Cards() {
     return(
         <div >
 
+
+            <nav className={'mb-4 flex items-center'}>
+               <Flex className={"items-center gap-14 justify-center"}>
+                   <Text className={'text-3xl'}>
+                       <Strong  >All menus ({name.length}) </Strong>
+                   </Text>
+
+               </Flex>
+            </nav>
+
+            <nav className={'mb-8'}>
+                <Filter/>
+            </nav>
 
 
             <div className={'grid grid-cols-3 gap-4'}>

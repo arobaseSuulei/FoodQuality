@@ -17,9 +17,7 @@ function Home() {
         <div>
             <Theme appearance="Light" style={{ margin: '2px' }} className="flex gap-22">
                 <div className={'p-14 flex flex-col gap-12'}>
-                    <Text className={'text-3xl'}>
-                        <Strong >All menus </Strong>
-                    </Text>
+
                     <nav className={''}>
                         <Cards />
                     </nav>
