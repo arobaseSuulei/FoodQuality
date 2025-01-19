@@ -49,7 +49,7 @@ export default function Cards() {
             </nav>
 
 
-            <div className={'grid grid-cols-3 gap-4'}>
+            <div className={'grid grid-cols-1 sm:grid-cols-3 gap-4'}>
                 { name.length>0 ?  name.map((item, index) => (
                     <Link to={"/Things"}>
                         <div className={'border hover:bg-gray-100 h-32  p-4 rounded-lg'} key={index}>
