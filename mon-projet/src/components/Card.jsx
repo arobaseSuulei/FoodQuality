@@ -6,6 +6,7 @@ import {createClient} from "@supabase/supabase-js";
 import Home from "./Home.jsx";
 import {Link} from "react-router-dom";
 import Filter from "./Filter.jsx";
+import { useParams } from "react-router-dom";
 
 const supabase = createClient("https://pxyqknxfvimxdcmplbff.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB4eXFrbnhmdmlteGRjbXBsYmZmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjkzMDM4NjIsImV4cCI6MjA0NDg3OTg2Mn0.cuq3c8ejHCSky7BcV1qlj76_QYWcYXYiAbvDolxN6Uk");
 
@@ -14,6 +15,9 @@ const supabase = createClient("https://pxyqknxfvimxdcmplbff.supabase.co", "eyJhb
 export default function Cards() {
 
     const [name, setName] = useState([]);
+
+
+
 
 
 
@@ -28,6 +32,9 @@ export default function Cards() {
 
         console.log(data);
     }
+
+
+
 
 
 
@@ -51,7 +58,7 @@ export default function Cards() {
 
             <div className={'grid grid-cols-1 sm:grid-cols-3 gap-4'}>
                 { name.length>0 ?  name.map((item, index) => (
-                    <Link to={"/Things"}>
+                    <Link to={`/Things/${item.id}`}>
                         <div className={'border hover:bg-gray-100 h-32  p-4 rounded-lg'} key={index}>
                             <nav className={'flex justify-between items-center'}>
                                 <p>{item.Item}</p>
