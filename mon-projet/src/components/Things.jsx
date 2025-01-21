@@ -41,7 +41,7 @@ export default function Things() {
 
 
                <Text>
-                   <Box width={"450px"} maxWidth="940px">
+                   <Box >
                        <Card size="4">
                            <Inset clip="padding-box" side="top" pb="current">
 
