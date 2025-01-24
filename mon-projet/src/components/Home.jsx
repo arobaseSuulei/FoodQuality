@@ -3,6 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 import "@radix-ui/themes/styles.css";
 import { Badge, Card, Em, Flex, Strong, Theme, Text } from "@radix-ui/themes";
 import Cards from "./Card.jsx";
+import Elements from "./Elements.jsx";
 
 const supabase = createClient(
     "https://pxyqknxfvimxdcmplbff.supabase.co",
@@ -21,7 +22,7 @@ function Home() {
             <div className="p-14 flex flex-col gap-12">
                 <nav>
                     <button className={'border'} onClick={toggleDark}>toggle</button>
-                    <Cards />
+                    <Cards/>
                 </nav>
             </div>
         </Theme>
