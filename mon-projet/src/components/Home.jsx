@@ -3,7 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 import "@radix-ui/themes/styles.css";
 import { Badge, Card, Em, Flex, Strong, Theme, Text } from "@radix-ui/themes";
 import Cards from "./Card.jsx";
-import Elements from "./Elements.jsx";
+
 
 const supabase = createClient(
     "https://pxyqknxfvimxdcmplbff.supabase.co",
