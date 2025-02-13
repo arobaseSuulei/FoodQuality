@@ -16,7 +16,7 @@ export default function App() {
                 <Route path={"/"} element={<Home />} />
                 <Route path={"/waitylist"} element={<Waitlist/>} />
                 <Route path={"/Things/:id"} element={<Things />} />
-                <Route path={"/LP"} element={<Test/>}/>
+                <Route path={"/Landing"} element={<Test/>}/>
             </Routes>
         </Router>
     );
