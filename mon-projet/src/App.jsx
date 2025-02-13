@@ -12,9 +12,7 @@ export default function App() {
 
     return(
         <Router>
-            <nav>
-                <Link to={'/Landing'}>LP</Link>
-            </nav>
+
             <Routes>
                 <Route  path={"/"} element={<Home />} />
                 <Route path={"/waitylist"} element={<Waitlist/>} />
